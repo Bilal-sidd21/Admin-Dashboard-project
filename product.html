@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdminPanel - Products</title>
+
+    <link rel="stylesheet" href="src/output.css" />
+
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+
+
+    <div id="overlay" class="flex min-h-screen">
+
+     <aside id="sidebr" class="fixed left-0 top-0 w-50 h-screen bg-amber-200 border-r shadow-md hidden md:block border-gray-200">  
+
+         <button
+        id="closeSidebar"
+        class="md:hidden top-2  ml-40  mt-2
+               w-8 h-2
+               flex items-center justify-center
+               rounded-md hover:bg-gray-200">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+        <div class="h-16 flex items-center px-6 border-b border-gray-200">
+
+          <div class="flex items-center gap-2">
+
+            <div  class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+              <i class="fa-solid fa-layer-group text-sm"></i>
+            </div>
+
+            <h1 class="text-lg font-bold text-gray-800">Adminpanel</h1>
+
+          </div>
+
+        </div>
+
+
+        <div class="px-4 py-5 border-b border-gray-200">
+          <div class="flex items-center gap-3">
+
+            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
+              <i class="fa-solid fa-user text-gray-500 text-sm"></i>
+            </div>
+
+            <div>
+              <p class="text-sm font-medium">BILAL BAGGA</p>
+              <p class="text-xs text-gray-500">Admin</p>
+            </div>
+
+          </div>
+        </div>
+        <nav class="flex-1 p-4">
+
+          <ul class="space-y-1">
+
+            <li>
+              <a  href="Dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+                <i class="fa-solid fa-chart-line w-4"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+
+            <li>
+              <a  href="user.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+                <i class="fa-solid fa-users w-4"></i>
+                <span>Users</span>
+              </a>
+            </li>
+
+            <li>
+              <a  href="product.html" class="flex items-center gap-3 px-3 py-2 bg-purple-100 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+                <i class="fa-solid fa-box w-4"></i>
+                <span>Products</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="order.html"class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100"              >
+                <i class="fa-solid fa-cart-shopping w-4"></i>
+                <span>Orders</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="Categories.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+                <i class="fa-solid fa-layer-group w-4"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+                <i class="fa-solid fa-chart-column w-4"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+                <i class="fa-solid fa-message w-4"></i>
+                <span>Messages</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <div class="p-4 border-t border-gray-200">
+         
+          <a  href="setting.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 mb-1">
+            <i class="fa-solid fa-gear w-4"></i>
+            <span>Settings</span>
+          </a>
+
+          <a href="" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-500 hover:bg-red-50" >
+            <i class="fa-solid fa-right-from-bracket w-4"></i>
+            <span>Logout</span>
+          </a>
+
+        </div>
+
+      </aside>
+      <main class="flex-1 md:ml-50">
+      <header  class="min-h-20  bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
+        <button  id="menubtn"  class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="min-w-0 flex-1">
+          <h2
+            class="text-base sm:text-lg font-semibold truncate">
+            Product Catalog
+          </h2>
+          <p
+            class="text-xs
+  text-gray-500
+                   truncate">
+
+            Pricing, and product details.
+
+          </p>
+
+        </div>
+        <button id="addProductBtn"
+          class="shrink-0
+                 bg-blue-600
+                 text-white
+                 text-xs
+                 px-3 sm:px-4
+                 py-2
+                 rounded-md
+                 font-semibold
+                 hover:bg-blue-700
+                 flex items-center gap-2">
+
+          <i class="fa-solid fa-plus"></i>
+
+          <span>
+            Add Product
+          </span>
+
+        </button>
+
+
+      </header>
+    
+
+
+        <section class="p-6">
+          
+            <div class="mb-6">
+
+            <div  class="relative max-w-md">
+              <i  class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <input id="searchInput" type="text" placeholder="Search products by name, SKU, or category..." class="w-full border border-gray-200 rounded-md pl-10 pr-4 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+          </div> 
+
+
+<div class="flex flex-wrap items-center gap-3 mb-6">
+
+    
+    <div class="relative">
+        <i class="fa-solid fa-layer-group absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+
+        <select
+            class="border border-gray-200 rounded-md pl-9 pr-8 py-2 text-sm bg-white outline-none focus:ring-2 focus:ring-blue-500">
+
+            <option>All Categories</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+            <option>Home</option>
+
+        </select>
+    </div>
+
+    <div class="relative">
+        <i class="fa-solid fa-dollar-sign absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+
+        <select
+            class="border border-gray-200 rounded-md pl-9 pr-8 py-2 text-sm bg-white outline-none focus:ring-2 focus:ring-blue-500">
+
+            <option>All Prices</option>
+            <option>Under $50</option>
+            <option>$50 - $100</option>
+            <option>$100 - $500</option>
+            <option>$500+</option>
+
+        </select>
+    </div>
+
+
+
+    <div class="relative">
+        <i class="fa-solid fa-circle-check absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+
+        <select
+            class="border border-gray-200 rounded-md pl-9 pr-8 py-2 text-sm bg-white outline-none focus:ring-2 focus:ring-blue-500">
+
+            <option>All Status</option>
+            <option>In Stock</option>
+            <option>Low Stock</option>
+            <option>Out of Stock</option>
+
+        </select>
+    </div>
+
+</div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <div class="flex items-center justify-between">
+                
+
+              <div>
+                <h3 class="font-semibold text-gray-800">Products</h3>
+                <p class="text-sm text-gray-500 mt-1">
+                  Your products will appear here.
+                </p>
+              </div>
+
+              <button  class="border border-gray-200 px-3 py-2 rounded-md text-sm flex items-center gap-2 hover:bg-gray-50" >
+                <i class="fa-solid fa-filter text-gray-500"></i>
+                <span>Filter</span>
+              </button>
+            </div>
+
+          </div>
+
+        </section>
+               
+
+        <div  id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+          <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-28 bg-gray-50 flex items-center justify-center relative">
+
+              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500"
+                class="h-25 w-38 object-cover"
+                alt="Laptop" />
+              <span  class="absolute top-2 right-2 text-[9px] bg-green-50 text-green-600 border border-green-100 px-2 py-1 rounded-full" >
+                <i class="fa-solid fa-circle text-[6px]"></i>
+                In Stock
+              </span>
+
+            </div>
+
+            <div class="p-4">
+
+              <div class="flex items-start justify-between gap-2">
+
+                <div>
+
+                  <p class="text-[9px] uppercase text-gray-400">
+                    Electronics
+                  </p>
+
+                  <h3 class="text-xs font-medium mt-2">
+                    Titanium Pro X1 Laptop
+                  </h3>
+
+                </div>
+
+                <strong class="text-sm">
+                  $1,299
+                </strong>
+
+              </div>
+
+
+              <div class="mt-4 text-[9px] text-gray-400">
+
+                <i class="fa-solid fa-box"></i>
+
+                42 in stock
+
+                <span class="mx-2">•</span>
+
+                SKU: LAP-001
+
+              </div>
+
+            </div>
+            <div  class="border-t border-gray-100 px-4 py-2 flex items-center justify-between" >
+
+
+              <div class="flex gap-4">
+
+                <button class="text-gray-500 hover:text-blue-600">
+                  <i class="fa-solid fa-pen text-xs"></i>
+                </button>
+
+                <button class="text-gray-500 hover:text-red-500">
+                  <i class="fa-solid fa-trash text-xs"></i>
+                </button>
+
+              </div>
+
+
+              <button
+                class="text-[9px] text-blue-600 border border-gray-200 px-3 py-1.5 rounded hover:bg-blue-50"
+              >
+                View Details
+              </button>
+
+            </div>
+
+          </div>
+
+      <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden"
+          >
+
+            <div class="h-28 bg-gray-50 flex items-center justify-center relative">
+
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+                class="h-25 w-38 object-cover"
+                alt="Headphones"
+              />
+
+              <span
+                class="absolute top-2 right-2 text-[9px] bg-orange-50 text-orange-500 border border-orange-100 px-2 py-1 rounded-full"
+              >
+                <i class="fa-solid fa-triangle-exclamation text-[7px]"></i>
+                Low Stock
+              </span>
+
+            </div>
+
+
+            <div class="p-4">
+
+              <div class="flex items-start justify-between gap-2">
+
+                <div>
+
+                  <p class="text-[9px] uppercase text-gray-400">
+                    Audio
+                  </p>
+
+                  <h3 class="text-xs font-medium mt-2">
+                    Aura Wireless Noise Cancelling Headphones
+                  </h3>
+
+                </div>
+
+                <strong class="text-sm">
+                  $349
+                </strong>
+
+              </div>
+
+
+              <div class="mt-4 text-[9px] text-orange-500">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                Only 3 left
+
+                <span class="mx-2 text-gray-300">•</span>
+
+                <span class="text-gray-400">
+                  SKU: AUD-842
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="border-t border-gray-100 px-4 py-2 flex items-center justify-between"
+            >
+
+              <div class="flex gap-4">
+
+                <button class="text-gray-500 hover:text-blue-600">
+                  <i class="fa-solid fa-pen text-xs"></i>
+                </button>
+
+                <button class="text-gray-500 hover:text-red-500">
+                  <i class="fa-solid fa-trash text-xs"></i>
+                </button>
+
+              </div>
+
+
+              <button
+                class="text-[9px] text-orange-500 border border-gray-200 px-3 py-1.5 rounded hover:bg-orange-50"
+              >
+                Restock
+              </button>
+
+            </div>
+
+          </div>
+
+          
+
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden"
+          >
+
+            <div class="h-28 bg-gray-50 flex items-center justify-center relative">
+
+              <img
+                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500"
+                class="h-25 w-38 object-cover"
+                alt="Smart Watch"
+              />
+
+              <span
+                class="absolute top-2 right-2 text-[9px] bg-red-50 text-red-500 border border-red-100 px-2 py-1 rounded-full"
+              >
+                <i class="fa-solid fa-circle text-[5px]"></i>
+                Out of Stock
+              </span>
+
+            </div>
+
+
+            <div class="p-4">
+
+              <div class="flex items-start justify-between gap-2">
+
+                <div>
+
+                  <p class="text-[9px] uppercase text-gray-400">
+                    Wearables
+                  </p>
+
+                  <h3 class="text-xs font-medium mt-2">
+                    Nexus Fitness Tracker Pro
+                  </h3>
+
+                </div>
+
+                <strong class="text-sm text-gray-500">
+                  $199
+                </strong>
+
+              </div>
+
+
+              <div class="mt-4 text-[9px] text-red-500">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                0 in stock
+
+                <span class="mx-2 text-gray-300">•</span>
+
+                <span class="text-gray-400">
+                  SKU: WEA-089
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="border-t border-gray-100 px-4 py-2 flex justify-end gap-4"
+            >
+
+              <button class="text-gray-500 hover:text-blue-600">
+                <i class="fa-solid fa-pen text-xs"></i>
+              </button>
+
+              <button class="text-gray-500 hover:text-red-500">
+                <i class="fa-solid fa-trash text-xs"></i>
+              </button>
+              
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden"
+          >
+
+            <div class="h-28 bg-gray-50 flex items-center justify-center relative">
+
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj51r4rRSzWgX9rn0n2m_4G7mhAgCODKbkB0VpbsDJEw&s=10"
+                class="h-25 w-38 object-cover"
+                alt="Keyboard" />
+
+              <span
+                class="absolute top-2 right-2 text-[9px] bg-green-50 text-green-600 border border-green-100 px-2 py-1 rounded-full"
+              >
+                <i class="fa-solid fa-circle text-[5px]"></i>
+                In Stock
+              </span>
+
+            </div>
+
+
+            <div class="p-4">
+
+              <div class="flex items-start justify-between gap-2">
+
+                <div>
+
+                  <p class="text-[9px] uppercase text-gray-400">
+                    Accessories
+                  </p>
+
+                  <h3 class="text-xs font-medium mt-2">
+                    Tactile Mechanical Keyboard
+                  </h3>
+
+                </div>
+
+                <strong class="text-sm">
+                  $149
+                </strong>
+
+              </div>
+
+
+              <div class="mt-4 text-[9px] text-gray-400">
+
+                <i class="fa-solid fa-box"></i>
+
+                124 in stock
+
+                <span class="mx-2">•</span>
+
+                SKU: ACC-302
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="border-t border-gray-100 px-4 py-2 flex items-center justify-between"
+            >
+
+              <div class="flex gap-4">
+
+                <button class="text-gray-500 hover:text-blue-600">
+                  <i class="fa-solid fa-pen text-xs"></i>
+                </button>
+
+                <button class="text-gray-500 hover:text-red-500">
+                  <i class="fa-solid fa-trash text-xs"></i>
+                </button>
+
+              </div>
+
+
+              <button
+                class="text-[9px] text-blue-600 border border-gray-200 px-3 py-1.5 rounded hover:bg-blue-50"
+              >
+                View Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="flex items-center justify-center gap-2 mt-6">
+
+          <button
+            class="w-8 h-8 border border-gray-200 bg-white rounded-md text-gray-400 hover:bg-gray-50"
+          >
+            <i class="fa-solid fa-chevron-left text-xs"></i>
+          </button>
+
+
+          <button
+            class="w-8 h-8 bg-blue-600 text-white rounded-md text-xs"
+          >
+            1
+          </button>
+
+
+          <button
+            class="w-8 h-8 border border-gray-200 bg-white rounded-md text-xs hover:bg-gray-50"
+          >
+            2
+          </button>
+
+
+          <button
+            class="w-8 h-8 border border-gray-200 bg-white rounded-md text-xs hover:bg-gray-50"
+          >
+            3
+          </button>
+
+
+          <span class="text-gray-400 text-xs">
+            ...
+          </span>
+
+
+          <button
+            class="w-8 h-8 border border-gray-200 bg-white rounded-md text-xs hover:bg-gray-50"
+          >
+            12
+          </button>
+
+
+          <button
+            class="w-8 h-8 border border-gray-200 bg-white rounded-md text-gray-600 hover:bg-gray-50"
+          >
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </button>
+
+        </div>
+
+      </section>
+
+      <footer
+        class="border-t border-gray-200 bg-white px-4 sm:px-6 py-4"
+      >
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-3"
+        >
+
+          <p class="text-xs text-gray-500">
+            © 2026  Predown Solutions
+          </p>
+
+
+          <div class="flex gap-4 text-xs text-gray-400">
+
+            <a href="#" class="hover:text-gray-600">
+              Privacy Policy
+            </a>
+
+            <a href="#" class="hover:text-gray-600">
+              Terms of Service
+            </a>
+
+            <a href="#" class="hover:text-gray-600">
+              Support
+            </a>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+      </main>
+    </div>
+<div id="productModal"
+     class="hidden fixed inset-0 z-50 bg-black/50
+            items-center justify-center p-4">
+
+    <div class="bg-white w-full max-w-md rounded-xl shadow-xl p-6">
+        <div class="flex justify-between items-center mb-5">
+
+            <h2 class="text-xl font-semibold">
+                Add Product
+            </h2>
+
+            <button
+                type="button"
+                id="closeModalBtn"
+                class="text-gray-500 hover:text-red-500 text-xl">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+        <form id="productForm">
+
+            <div class="mb-4">
+
+                <label class="block text-sm mb-1">
+                    Product Name
+                </label>
+
+                <input
+                    id="productName"
+                    type="text"
+                    placeholder="Enter product name"
+                    class="w-full border rounded-lg px-3 py-2"
+                    required
+                >
+
+            </div>
+            <div class="mb-4">
+
+                <label class="block text-sm mb-1">
+                    Category
+                </label>
+
+                <select
+                    id="productCategory"
+                    class="w-full border rounded-lg px-3 py-2"
+                    required>
+
+                    <option value="">  Select Category </option>
+
+   <option value="Electronics"> Electronics </option>
+
+                    <option value="Clothing">  Clothing </option>
+                    <option value="Accessories">
+            Accessories
+                    </option>
+
+                    <option value="Home">
+                        Home
+                    </option>
+
+                    <option value="Audio">
+                        Audio
+                    </option>
+
+                    <option value="Wearables">
+                        Wearables
+                    </option>
+
+                </select>
+
+            </div>
+            <div class="mb-4">
+
+                <label class="block text-sm mb-1">
+                    $${Price}
+                </label>
+
+                <input
+                    id="productPrice"
+                    type="number"
+                    min="0"
+                    placeholder="Enter price"
+                    class="w-full border rounded-lg px-3 py-2"
+                    required
+                >
+
+            </div>
+<div class="mb-4">
+    <label class="block text-sm mb-1">
+        Product Image URL
+    </label>
+
+    <input
+        id="productImage"
+        type="url"
+        placeholder="Paste image URL here"
+        class="w-full border rounded-lg px-3 py-2"
+        required
+    >
+</div>
+<div class="mb-4">
+    <label class="block text-sm mb-1">
+        SKU
+    </label>
+
+    <input
+        id="productSKU"
+        type="text"
+        placeholder="Example: ACC-302"
+        class="w-full border rounded-lg px-3 py-2"
+        required
+    >
+</div>
+            <div class="mb-4">
+
+                <label class="block text-sm mb-1">
+                    Stock
+                </label>
+
+                <input
+                    id="productStock"
+                    type="number"
+                    min="0"
+                    placeholder="Enter stock"
+                    class="w-full border rounded-lg px-3 py-2"
+                    required
+                >
+
+            </div>
+
+            <div class="flex justify-end gap-3">
+
+                <button
+                    type="button"
+                    id="cancelModalBtn"
+                    class="px-4 py-2 border rounded-lg
+                           hover:bg-gray-100">
+
+                    Cancel
+
+                </button>
+               
+    <button
+        class="viewDetails text-[9px] text-blue-600
+               border border-gray-200 px-3 py-1.5
+               rounded hover:bg-blue-50">
+
+        View Details
+
+    </button>
+
+</div>
+
+                <button
+                    type="submit"
+                    class="px-4 py-2 bg-blue-600
+                           text-white rounded-lg
+                           hover:bg-blue-700">
+
+                    Add Product
+
+                </button>
+                
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+  </body>
+  
+  <script src="js/product.js"></script>
+</html>
