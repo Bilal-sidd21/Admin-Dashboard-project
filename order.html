@@ -9,59 +9,47 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
-    <body class="bg-gray-50 text-gray-800">
+  <body class="bg-gray-50 text-gray-800">
     <div class="flex min-h-screen">
       <aside
         id="sidebr"
         class="fixed left-0 top-0 w-50 h-screen
                bg-white border-r shadow-md
-               hidden md:block border-gray-200"
-    > 
-     <button
-        id="closeSidebar"
-        class="md:hidden top-2  ml-40  mt-2
-               w-8 h-2
-               flex items-center justify-center
-               rounded-md hover:bg-gray-200">
-
-        <i class="fa-solid fa-xmark"></i>
-
-    </button>
+               hidden md:block border-gray-200 z-50"
+      > 
+        <button
+          id="closeSidebar"
+          class="md:hidden top-2 ml-40 mt-2
+                 w-8 h-2
+                 flex items-center justify-center
+                 rounded-md hover:bg-gray-200">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
 
         <div class="h-16 flex items-center px-6 border-b border-gray-200">
-
           <div class="flex items-center gap-2">
-
-            <div  class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
               <i class="fa-solid fa-layer-group text-sm"></i>
             </div>
-
             <h1 class="text-lg font-bold text-gray-800">Adminpanel</h1>
-
           </div>
-
         </div>
-
 
         <div class="px-4 py-5 border-b border-gray-200">
           <div class="flex items-center gap-3">
-
             <div class="w-9 h-9 rounded-full overflow-hidden">
-    <img 
-        src="Images/images.png" 
-        alt="Profile"
-        class="w-full h-full object-cover"
-    >
-</div>
-
+              <img 
+                src="Images/images.png" 
+                alt="Profile"
+                class="w-full h-full object-cover"
+              >
+            </div>
             <div>
               <p class="text-sm font-medium">BILAL BAGGA</p>
               <p class="text-xs text-gray-500">Admin</p>
             </div>
-
           </div>
         </div>
-
 
         <nav class="flex-1 space-y-1 px-3 py-4">
           <a href="index.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
@@ -94,7 +82,7 @@
           </a>
         </nav>
 
-        <div class="border-t border-gray-200 p-3  mt-10 space-y-1">
+        <div class="border-t border-gray-200 p-3 mt-10 space-y-1">
           <a href="setting.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
             <i class="fa-solid fa-gear w-5 text-center text-gray-500"></i>
             <span>Settings</span>
@@ -105,8 +93,10 @@
           </a>
         </div>
       </aside>
-        <main class="flex-1 md:ml-50">
-        <header  class="min-h-20   bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
+
+      <!-- Main Content Container -->
+      <div class="flex-1 flex flex-col md:ml-50 min-h-screen">
+        <header class="min-h-20 bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
           <div class="flex items-center gap-3">
             <button
               id="menubtn"
@@ -119,8 +109,27 @@
               <p class="hidden text-xs text-gray-500 sm:block">Review and manage recent transactions</p>
             </div>
           </div>
+          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              id="themeToggleBtn"
+              title="Toggle Theme"
+              class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
+            >
+              <i class="fa-solid fa-moon text-sm" id="themeIcon"></i>
+            </button>
+            <a
+              href="login.html"
+              class="flex items-center gap-2 px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg shadow-sm transition-colors"
+            >
+              <i class="fa-solid fa-right-to-bracket"></i>
+              <span>Login</span>
+            </a>
+          </div>
+        </header>
 
-          <div class="flex items-center gap-2">
+        <!-- Action Bar: Add Order Button Moved to End -->
+        <div class="min-h-20 bg-white border-b border-gray-200 flex items-center justify-between gap-3 px-3 sm:px-6 py-3">
+          <div class="flex items-center gap-3">
             <button class="flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 sm:text-sm">
               <i class="fa-solid fa-sliders text-gray-500"></i>
               <span>Filter</span>
@@ -129,17 +138,18 @@
               <i class="fa-solid fa-download text-gray-500"></i>
               <span>Export</span>
             </button>
-            <button
-              id="addOrderBtn"
-              class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors sm:text-sm"
-            >
-              <i class="fa-solid fa-plus text-xs"></i>
-              <span>Add Order</span>
-            </button>
           </div>
-        </header>
-        <main class="flex-1 p-4 sm:p-6 space-y-6 max-w-5xl mx-auto w-full">
-          
+          <button
+            id="addOrderBtn"
+            class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors sm:text-sm"
+          >
+            <i class="fa-solid fa-plus text-xs"></i>
+            <span>Add Order</span>
+          </button>
+        </div>
+
+        <!-- Main Body Section: Removed max-w-5xl to span full width -->
+        <main class="flex-1 p-4 sm:p-6 space-y-6 w-full">
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
               <span class="text-xs font-semibold text-gray-500 uppercase">Pending Orders</span>
@@ -165,6 +175,7 @@
               </div>
             </div>
           </div>
+
           <div class="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
             <div class="flex flex-col gap-3 border-b border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div class="relative flex-1 max-w-md">
@@ -193,7 +204,6 @@
               </div>
             </div>
 
-            
             <div id="ordersList" class="divide-y divide-gray-100">
             </div>
 
@@ -215,11 +225,10 @@
             </div>
           </div>
         </footer>
-        </main>
       </div>
     </div>
 
-  
+    <!-- Modal -->
     <div id="orderModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 hidden">
       <div class="w-full max-w-md rounded-xl bg-white p-6 shadow-xl animate-in fade-in zoom-in duration-200">
         <div class="flex items-center justify-between border-b border-gray-100 pb-3">

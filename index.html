@@ -4,311 +4,284 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdminPanel - Dashboard</title>
-
     <link rel="stylesheet" href="src/output.css" />
-
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   </head>
 
-  <body class="bg-gray-50 text-gray-800">
+  <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div class="flex min-h-screen">
 
-
-    <div class="flex-1 min-h-screen">
-
+      <!-- Sidebar -->
       <aside
         id="sidebr"
-        class="fixed left-0 top-0 w-50 h-screen
-               bg-white border-r shadow-md
-               hidden md:block border-gray-200 z-50"
-    > 
-     <button
-        id="closeSidebar"
-        class="md:hidden top-2  ml-40  mt-2
-               w-8 h-2
-               flex items-center justify-center
-               rounded-md hover:bg-gray-200">
+        class="fixed left-0 top-0 w-50 h-screen bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 shadow-md hidden md:block z-50 transition-colors duration-200"
+      > 
+        <button
+          id="closeSidebar"
+          class="md:hidden top-2 ml-40 mt-2 w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
 
-        <i class="fa-solid fa-xmark"></i>
-
-    </button>
-
-        <div class="h-16 flex items-center px-6 border-b border-gray-200">
-
+        <div class="h-16 flex items-center px-6 border-b border-gray-200 dark:border-gray-700">
           <div class="flex items-center gap-2">
-
-            <div  class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
               <i class="fa-solid fa-layer-group text-sm"></i>
             </div>
-
-            <h1 class="text-lg font-bold text-gray-800">Adminpanel</h1>
-
+            <h1 class="text-lg font-bold text-gray-800 dark:text-white">Adminpanel</h1>
           </div>
-
         </div>
 
-
-        <div class="px-4 py-5 border-b border-gray-200">
+        <div class="px-4 py-5 border-b border-gray-200 dark:border-gray-700">
           <div class="flex items-center gap-3">
-
             <div class="w-9 h-9 rounded-full overflow-hidden">
-    <img 
-        src="Images/images.png" 
-        alt="Profile"
-        class="w-full h-full object-cover"
-    >
-</div>
-
-            <div>
-              <p class="text-sm font-medium">BILAL BAGGA</p>
-              <p class="text-xs text-gray-500">Admin</p>
+              <img 
+                src="Images/images.png" 
+                alt="Profile"
+                class="w-full h-full object-cover"
+              >
             </div>
-
+            <div>
+              <p class="text-sm font-medium text-gray-800 dark:text-gray-200">BILAL BAGGA</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Admin</p>
+            </div>
           </div>
         </div>
-
-
 
         <nav class="flex-1 p-4">
-  <ul class="space-y-1">
-    <li>
-      <a href="index.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-blue-600 transition-colors hover:bg-gray-100 hover:text-blue-600">
-        <i class="fa-solid fa-chart-line w-4"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
-    <li>
-      <a href="user.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-        <i class="fa-solid fa-users w-4"></i>
-        <span>Users</span>
-      </a>
-    </li>
-    <li>
-      <a href="product.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-        <i class="fa-solid fa-box w-4"></i>
-        <span>Products</span>
-      </a>
-    </li>
-    <li>
-      <a href="order.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-        <i class="fa-solid fa-cart-shopping w-4"></i>
-        <span>Orders</span>
-      </a>
-    </li>
-    <li>
-      <a href="Categories.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-        <i class="fa-solid fa-layer-group w-4"></i>
-        <span>Categories</span>
-      </a>
-    </li>
-    <li>
-      <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-        <i class="fa-solid fa-chart-column w-4"></i>
-        <span>Reports</span>
-      </a>
-    </li>
-    <li>
-      <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-        <i class="fa-solid fa-message w-4"></i>
-        <span>Messages</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+          <ul class="space-y-1">
+            <li>
+              <a href="index.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-blue-600 bg-blue-50 dark:bg-gray-700 dark:text-blue-400 transition-colors">
+                <i class="fa-solid fa-chart-line w-4"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="user.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-users w-4"></i>
+                <span>Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="product.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-box w-4"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="order.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-cart-shopping w-4"></i>
+                <span>Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="Categories.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-layer-group w-4"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+            <li>
+              <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-chart-column w-4"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                <i class="fa-solid fa-message w-4"></i>
+                <span>Messages</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-        <div class="p-5 mt-10 border-t border-gray-200 ">
-         
-          <a  href="setting.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+        <div class="p-5 mt-10 border-t border-gray-200 dark:border-gray-700">
+          <a href="setting.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
             <i class="fa-solid fa-gear w-4"></i>
             <span>Settings</span>
           </a>
-
-          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-500 hover:bg-red-50" >
+          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/30">
             <i class="fa-solid fa-right-from-bracket w-4"></i>
             <span>Logout</span>
           </a>
-
         </div>
-
       </aside>
-      <main class="flex-1 md:ml-50">
-      <header  class="min-h-20 sticky top-0 z-50 bg-white border-b  border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
-        <button  id="menubtn"  class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="min-w-0 flex-1">
-          <h2
-            class="text-base sm:text-lg font-semibold truncate">
-             Analytics Overview
-          </h2>
-          <p class="text-xs text-gray-500 truncate">
-            Product, User & Revenue
-          </p>
-        </div>
-      </header>
-        <main class="p-6 bg-gray-50 overflow-y-auto flex-1">
-      
-          <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
-            <div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
-                <p class="text-xs text-gray-500 font-semibold mb-1">Total Users</p>
-                <div class="flex justify-between items-end">
-                  <h3 class="text-2xl font-bold text-gray-800">12,450</h3>
-                  <i class="fa-solid fa-chart-line text-green-400 text-xl opacity-70"></i>
-                </div>
-              </div>
 
-              <div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
-                <p class="text-xs text-gray-500 font-semibold mb-1">Products</p>
-                <div class="flex justify-between items-end">
-                  <h3 class="text-2xl font-bold text-gray-800">82,00</h3>
-                  <i class="fa-solid fa-chart-line text-green-400 text-xl opacity-70"></i>
-                </div>
-              </div>
-              <div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
-                <p class="text-xs text-gray-500 font-semibold mb-1">Revenue</p>
-                <div class="flex justify-between items-end">
-                  <h3 class="text-2xl font-bold text-gray-800">$345,600</h3>
-                  <i class="fa-solid fa-chart-line text-green-400 text-xl opacity-70"></i>
-                </div>
-              </div>
-              <div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
-                <p class="text-xs text-gray-500 font-semibold mb-1">Order</p>
-                <div class="flex justify-between items-end">
-                  <h3 class="text-2xl font-bold text-gray-800">764</h3>
-                  <i class="fa-solid fa-chart-line text-green-400 text-xl opacity-70"></i>
-                </div>
-              </div>
-
-              <div>
-
-
-                
-              </div>
-      </div>
-      <div class="bg-white p-4 sm:p-5 rounded-xl shadow w-full">
-
-    <h2 class="text-lg sm:text-xl font-semibold mb-4">
-        Sales Overview
-    </h2>
-    <div class="relative w-full h-60 sm:h-80 lg:h-96">
-        <canvas id="salesChart"></canvas>
-    </div>
-
-</div>
-
-<div class="bg-white rounded-xl shadow-sm border border-gray-100 mt-6">
-
-    <!-- Header -->
-    <div class="p-5 border-b border-gray-100">
-        <h2 class="text-lg font-semibold text-gray-800">
-            Recently Activity
-        </h2>
-    </div>
-    <div class="divide-y divide-gray-100">
-        <div class="flex items-center gap-4 p-4">
-
-            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-user-plus text-blue-600"></i>
+      <!-- Main Wrapper -->
+      <div class="flex-1 flex flex-col md:ml-50 min-h-screen">
+        
+        <!-- Header -->
+        <header class="min-h-20 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3 transition-colors duration-200">
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <button id="menubtn" class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="min-w-0 flex-1">
+              <h2 class="text-base sm:text-lg font-semibold truncate text-gray-900 dark:text-white">
+                Analytics Overview
+              </h2>
+              <p class="text-xs text-gray-500 dark:text-gray-400 truncate">
+                Product, User & Revenue
+              </p>
             </div>
-
-            <div class="flex-1">
-                <p class="text-sm font-semibold text-gray-800">
-                    New User
-                </p>
-
-                <p class="text-xs text-gray-500">
-                    Muhammad Ali registered
-                </p>
-            </div>
-
-            <span class="text-xs text-gray-400">
-                5 min ago
-            </span>
-
-        </div>
-        <div class="flex items-center gap-4 p-4">
-
-            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-cart-shopping text-green-600"></i>
-            </div>
-
-            <div class="flex-1">
-                <p class="text-sm font-semibold text-gray-800">
-                    New Order
-                </p>
-
-                <p class="text-xs text-gray-500">
-                    Order No. #1024
-                </p>
-            </div>
-
-            <span class="text-xs text-gray-400">
-                20 min ago
-            </span>
-
-        </div>
-        <div class="flex items-center gap-4 p-4">
-
-            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-box text-purple-600"></i>
-            </div>
-
-            <div class="flex-1">
-                <p class="text-sm font-semibold text-gray-800">
-                    New Product
-                </p>
-
-                <p class="text-xs text-gray-500">
-                    Wireless Headphones
-                </p>
-            </div>
-
-            <span class="text-xs text-gray-400">
-                1 hour ago
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
-      <footer
-        class="border-t border-gray-200 bg-white px-4 sm:px-6 py-4"
-      >
-
-        <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-3"
-        >
-
-          <p class="text-xs text-gray-500">
-            © 2026  Predown Solutions
-          </p>
-
-
-          <div class="flex gap-4 text-xs text-gray-400">
-
-            <a href="#" class="hover:text-gray-600">
-              Privacy Policy
-            </a>
-
-            <a href="#" class="hover:text-gray-600">
-              Terms of Service
-            </a>
-
-            <a href="#" class="hover:text-gray-600">
-              Support
-            </a>
-
           </div>
 
-        </div>
+          <!-- Header Actions -->
+          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              id="themeToggleBtn"
+              title="Toggle Theme"
+              class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              <i class="fa-solid fa-moon text-sm" id="themeIcon"></i>
+            </button>
 
-      </footer>
+            <a
+              href="login.html"
+              class="flex items-center gap-2 px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg shadow-sm transition-colors"
+            >
+              <i class="fa-solid fa-right-to-bracket"></i>
+              <span>Login</span>
+            </a>
+          </div>
+        </header>
 
-      </main>
+        <!-- Main Content Area -->
+        <main class="p-6 bg-gray-50 dark:bg-gray-900 overflow-y-auto flex-1 transition-colors duration-200">
+          
+          <!-- Top Stats Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-700">
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-1">Total Users</p>
+              <div class="flex justify-between items-end">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">12,450</h3>
+                <i class="fa-solid fa-chart-line text-green-500 text-xl opacity-80"></i>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-700">
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-1">Products</p>
+              <div class="flex justify-between items-end">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">8,200</h3>
+                <i class="fa-solid fa-chart-line text-green-500 text-xl opacity-80"></i>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-700">
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-1">Revenue</p>
+              <div class="flex justify-between items-end">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">$345,600</h3>
+                <i class="fa-solid fa-chart-line text-green-500 text-xl opacity-80"></i>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-700">
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-1">Order</p>
+              <div class="flex justify-between items-end">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">764</h3>
+                <i class="fa-solid fa-chart-line text-green-500 text-xl opacity-80"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Box -->
+          <div class="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-xl shadow border border-gray-100 dark:border-gray-700 w-full">
+            <h2 class="text-lg sm:text-xl font-semibold mb-4 text-gray-800 dark:text-white">
+              Sales Overview
+            </h2>
+            <div class="relative w-full h-60 sm:h-80 lg:h-96">
+              <canvas id="salesChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 mt-6">
+            <div class="p-5 border-b border-gray-100 dark:border-gray-700">
+              <h2 class="text-lg font-semibold text-gray-800 dark:text-white">
+                Recently Activity
+              </h2>
+            </div>
+            
+            <div class="divide-y divide-gray-100 dark:divide-gray-700">
+              <div class="flex items-center gap-4 p-4">
+                <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-user-plus text-blue-600 dark:text-blue-400"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                    New User
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Muhammad Ali registered
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 dark:text-gray-500">
+                  5 min ago
+                </span>
+              </div>
+
+              <div class="flex items-center gap-4 p-4">
+                <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/40 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-cart-shopping text-green-600 dark:text-green-400"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                    New Order
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Order No. #1024
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 dark:text-gray-500">
+                  20 min ago
+                </span>
+              </div>
+
+              <div class="flex items-center gap-4 p-4">
+                <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-box text-purple-600 dark:text-purple-400"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                    New Product
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Wireless Headphones
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 dark:text-gray-500">
+                  1 hour ago
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 sm:px-6 py-4 mt-auto transition-colors duration-200">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              © 2026 Predown Solutions
+            </p>
+            <div class="flex gap-4 text-xs text-gray-400 dark:text-gray-500">
+              <a href="#" class="hover:text-gray-600 dark:hover:text-gray-300">
+                Privacy Policy
+              </a>
+              <a href="#" class="hover:text-gray-600 dark:hover:text-gray-300">
+                Terms of Service
+              </a>
+              <a href="#" class="hover:text-gray-600 dark:hover:text-gray-300">
+                Support
+              </a>
+            </div>
+          </div>
+        </footer>
+
+      </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/index.js"></script>
     <script src="js/app.js"></script>
-
   </body>
-</html
+</html>

@@ -137,47 +137,50 @@
 
       </aside>
       <main class="flex-1 md:ml-50">
-      <header  class="min-h-20   bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
-        <button  id="menubtn"  class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="min-w-0 flex-1">
-          <h2
-            class="text-base sm:text-lg font-semibold truncate">
-            Product Catalog
-          </h2>
-          <p
-            class="text-xs
-  text-gray-500
-                   truncate">
+      <header class="min-h-20 bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
+          <div class="flex items-center gap-3">
+            <button
+              id="menubtn"
+              class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 md:hidden"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div>
+              <h2 class="text-base font-bold text-gray-900 sm:text-lg">Orders Management</h2>
+              <p class="hidden text-xs text-gray-500 sm:block">Review and manage recent transactions</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              id="themeToggleBtn"
+              title="Toggle Theme"
+              class="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
+            >
+              <i class="fa-solid fa-moon text-sm" id="themeIcon"></i>
+            </button>
+            <a
+              href="login.html"
+              class="flex items-center gap-2 px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg shadow-sm transition-colors"
+            >
+              <i class="fa-solid fa-right-to-bracket"></i>
+              <span>Login</span>
+            </a>
+          </div>
+        </header>
 
-            Pricing, and product details.
-
-          </p>
-
+        <!-- Action Bar: Add Order Button Moved to End -->
+        <div class="min-h-20 bg-white border-b border-gray-200 flex items-center justify-between gap-3 px-3 sm:px-6 py-3">
+          <div class="flex items-center gap-3">
+            
+          </div>
+          <button
+            id="addOrderBtn"
+            class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors sm:text-sm"
+          >
+            <i class="fa-solid fa-plus text-xs"></i>
+            <span>Add Order</span>
+          </button>
         </div>
-        <button id="addProductBtn"
-          class="shrink-0
-                 bg-blue-600
-                 text-white
-                 text-xs
-                 px-3 sm:px-4
-                 py-2
-                 rounded-md
-                 font-semibold
-                 hover:bg-blue-700
-                 flex items-center gap-2">
-
-          <i class="fa-solid fa-plus"></i>
-
-          <span>
-            Add Product
-          </span>
-
-        </button>
-
-
-      </header>
     
 
 

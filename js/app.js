@@ -85,32 +85,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Logout link selector
+  const logoutBtn = document.querySelector('a[href="#"]'); // Ya direct ID se target karein
+
+  // Alternate: Logout element par ID lagayein <a id="logoutBtn" href="#">
+  const logoutElement = document.getElementById("logoutBtn") || logoutBtn;
+
+  if (logoutElement) {
+    logoutElement.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Session data remove karein
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("userEmail");
+
+      // Login page par bhej dein
+      window.location.href = "login.html";
+    });
+  }
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  const themeIcon = document.getElementById("themeIcon");
+
+  // Check saved theme or system setting
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+    applyDarkMode();
+  } else {
+    applyLightMode();
+  }
+
+  // Toggle Theme on Moon/Sun Icon Click
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      if (isDarkMode) {
+        applyLightMode();
+      } else {
+        applyDarkMode();
+      }
+    });
+  }
+
+  function applyDarkMode() {
+    document.documentElement.classList.add("dark");
+    if (themeIcon) {
+      themeIcon.classList.remove("fa-moon");
+      themeIcon.classList.add("fa-sun");
+    }
+    localStorage.setItem("theme", "dark");
+  }
+
+  function applyLightMode() {
+    document.documentElement.classList.remove("dark");
+    if (themeIcon) {
+      themeIcon.classList.remove("fa-sun");
+      themeIcon.classList.add("fa-moon");
+    }
+    localStorage.setItem("theme", "light");
+  }
+});
 
 
 
 
 
-// function syncAdminProfile() {
-//   const savedName = localStorage.getItem("admin_name");
-//   const savedImage = localStorage.getItem("admin_photo");
-
-//   const nameElem = document.getElementById("globalSidebarName");
-//   const avatarImg = document.getElementById("globalSidebarImg");
-//   const avatarIcon = document.getElementById("globalSidebarIcon");
 
 
-  
-//   if (savedName && nameElem) {
-//     nameElem.textContent = savedName;
-//   }
 
- 
-//   if (savedImage && avatarImg && avatarIcon) {
-//     avatarImg.src = savedImage;
-//     avatarImg.classList.remove("hidden");
-//     avatarIcon.classList.add("hidden");
-//   }
-// }
 
-// // Page load hotay hi run hoga
-// document.addEventListener("DOMContentLoaded", syncAdminProfile);
