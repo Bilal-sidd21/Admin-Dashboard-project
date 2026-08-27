@@ -1,28 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AdminPanel - Order</title>
-
+    <title>AdminPanel - Orders</title>
     <link rel="stylesheet" href="src/output.css" />
-
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
-
-  <body class="bg-gray-50 text-gray-800">
-
-
+    <body class="bg-gray-50 text-gray-800">
     <div class="flex min-h-screen">
-
       <aside
-    id="sidebr"
-    class="fixed left-0 top-0 w-50 h-screen
-           bg-amber-200 border-r shadow-md
-           hidden md:block border-gray-200"
->
-        
-          <button
+        id="sidebr"
+        class="fixed left-0 top-0 w-50 h-screen
+               bg-white border-r shadow-md
+               hidden md:block border-gray-200"
+    > 
+     <button
         id="closeSidebar"
         class="md:hidden top-2  ml-40  mt-2
                w-8 h-2
@@ -51,9 +46,13 @@
         <div class="px-4 py-5 border-b border-gray-200">
           <div class="flex items-center gap-3">
 
-            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
-              <i class="fa-solid fa-user text-gray-500 text-sm"></i>
-            </div>
+            <div class="w-9 h-9 rounded-full overflow-hidden">
+    <img 
+        src="Images/images.png" 
+        alt="Profile"
+        class="w-full h-full object-cover"
+    >
+</div>
 
             <div>
               <p class="text-sm font-medium">BILAL BAGGA</p>
@@ -64,132 +63,206 @@
         </div>
 
 
-
-        <nav class="flex-1 p-4">
-
-          <ul class="space-y-1">
-
-            <li>
-              <a  href="Dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-                <i class="fa-solid fa-chart-line w-4"></i>
-                <span>Dashboard</span>
-              </a>
-            </li>
-
-            <li>
-              <a  href="user.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm   text-gray-600  hover:bg-gray-100">
-                <i class="fa-solid fa-users w-4"></i>
-                <span>Users</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="product.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm  text-gray-600  hover:bg-gray-100">
-                <i class="fa-solid fa-box w-4"></i>
-                <span>Products</span>
-              </a>
-            </li>
-
-            <li>
-              <a  href="order.html" class="flex items-center gap-3 px-3 py-2 bg-purple-100 rounded-lg text-sm text-gray-600 hover:bg-gray-100">              
-                <i class="fa-solid fa-cart-shopping w-4"></i>
-                <span>Orders</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="Categories.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-                <i class="fa-solid fa-layer-group w-4"></i>
-                <span>Categories</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-                <i class="fa-solid fa-chart-column w-4"></i>
-                <span>Reports</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-                <i class="fa-solid fa-message w-4"></i>
-                <span>Messages</span>
-              </a>
-            </li>
-
-          </ul>
-
+        <nav class="flex-1 space-y-1 px-3 py-4">
+          <a href="index.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-chart-line w-5 text-center text-gray-500"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="user.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-users w-5 text-center text-gray-500"></i>
+            <span>Users</span>
+          </a>
+          <a href="product.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-box w-5 text-center text-gray-500"></i>
+            <span>Products</span>
+          </a>
+          <a href="order.html" class="flex items-center gap-3 rounded-lg bg-blue-50 px-3 py-2.5 text-sm font-semibold text-blue-600 shadow-sm">
+            <i class="fa-solid fa-cart-shopping w-5 text-center text-blue-600"></i>
+            <span>Orders</span>
+          </a>
+          <a href="Categories.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-layer-group w-5 text-center text-gray-500"></i>
+            <span>Categories</span>
+          </a>
+          <a href="reports.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-chart-column w-5 text-center text-gray-500"></i>
+            <span>Reports</span>
+          </a>
+          <a href="messages.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-message w-5 text-center text-gray-500"></i>
+            <span>Messages</span>
+          </a>
         </nav>
 
-        <div class="p-4 border-t border-gray-200">
-         
-          <a  href="setting.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 mb-1">
-            <i class="fa-solid fa-gear w-4"></i>
+        <div class="border-t border-gray-200 p-3  mt-10 space-y-1">
+          <a href="setting.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <i class="fa-solid fa-gear w-5 text-center text-gray-500"></i>
             <span>Settings</span>
           </a>
-
-          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-500 hover:bg-red-50" >
-            <i class="fa-solid fa-right-from-bracket w-4"></i>
+          <a href="#" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50">
+            <i class="fa-solid fa-right-from-bracket w-5 text-center text-red-500"></i>
             <span>Logout</span>
           </a>
-
         </div>
-
       </aside>
-      <main class="flex-1 md:ml-50">
-
-        <header  class="min-h-20  bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
-          <button  id="menubtn"  class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-          <div class="min-w-0 flex-1">
-          <h2
-            class="text-base sm:text-lg font-semibold truncate">
-             Order Management
-          </h2>
-          <p
-            class="text-xs text-gray-500 truncate">
-         Review and manage recent order.
-          </p>
-        </div>  
-       </header>
-        
-      <footer
-        class="border-t border-gray-200 bg-white px-4 sm:px-6 py-4"
-      >
-
-        <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-3"
-        >
-
-          <p class="text-xs text-gray-500">
-            © 2026  Predown Solutions
-          </p>
-
-
-          <div class="flex gap-4 text-xs text-gray-400">
-
-            <a href="#" class="hover:text-gray-600">
-              Privacy Policy
-            </a>
-
-            <a href="#" class="hover:text-gray-600">
-              Terms of Service
-            </a>
-
-            <a href="#" class="hover:text-gray-600">
-              Support
-            </a>
-
+        <main class="flex-1 md:ml-50">
+        <header  class="min-h-20   bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
+          <div class="flex items-center gap-3">
+            <button
+              id="menubtn"
+              class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 md:hidden"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div>
+              <h2 class="text-base font-bold text-gray-900 sm:text-lg">Orders Management</h2>
+              <p class="hidden text-xs text-gray-500 sm:block">Review and manage recent transactions</p>
+            </div>
           </div>
 
+          <div class="flex items-center gap-2">
+            <button class="flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 sm:text-sm">
+              <i class="fa-solid fa-sliders text-gray-500"></i>
+              <span>Filter</span>
+            </button>
+            <button class="flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 sm:text-sm">
+              <i class="fa-solid fa-download text-gray-500"></i>
+              <span>Export</span>
+            </button>
+            <button
+              id="addOrderBtn"
+              class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors sm:text-sm"
+            >
+              <i class="fa-solid fa-plus text-xs"></i>
+              <span>Add Order</span>
+            </button>
+          </div>
+        </header>
+        <main class="flex-1 p-4 sm:p-6 space-y-6 max-w-5xl mx-auto w-full">
+          
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+              <span class="text-xs font-semibold text-gray-500 uppercase">Pending Orders</span>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span id="pendingCount" class="text-2xl font-bold text-blue-600">0</span>
+                <span class="text-xs text-gray-500">Active</span>
+              </div>
+            </div>
+
+            <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+              <span class="text-xs font-semibold text-gray-500 uppercase">Total Revenue</span>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span id="totalRevenue" class="text-2xl font-bold text-blue-600">$0.00</span>
+                <span class="text-xs text-green-600 font-medium">+12% vs last month</span>
+              </div>
+            </div>
+
+            <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+              <span class="text-xs font-semibold text-gray-500 uppercase">Avg Fulfillment</span>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span class="text-2xl font-bold text-blue-600">1.2 days</span>
+                <span class="text-xs text-gray-500">Optimal</span>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+            <div class="flex flex-col gap-3 border-b border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between">
+              <div class="relative flex-1 max-w-md">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                <input
+                  id="searchInput"
+                  type="text"
+                  placeholder="Search order ID, customer name..."
+                  class="w-full rounded-lg bg-blue-50/60 border-0 py-2 pl-9 pr-4 text-xs sm:text-sm focus:bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+                />
+              </div>
+
+              <div id="filterContainer" class="flex flex-wrap items-center gap-1.5">
+                <button data-filter="ALL" class="filter-btn active-filter rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+                  All
+                </button>
+                <button data-filter="PROCESSING" class="filter-btn rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50">
+                  Processing
+                </button>
+                <button data-filter="SHIPPED" class="filter-btn rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50">
+                  Shipped
+                </button>
+                <button data-filter="DELIVERED" class="filter-btn rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50">
+                  Delivered
+                </button>
+              </div>
+            </div>
+
+            
+            <div id="ordersList" class="divide-y divide-gray-100">
+            </div>
+
+            <div class="border-t border-gray-100 p-3 text-center">
+              <button class="text-xs font-bold text-blue-600 hover:text-blue-800">
+                Load More Orders
+              </button>
+            </div>
+          </div>
+        </main>
+
+        <footer class="border-t border-gray-200 bg-white px-4 sm:px-6 py-4 mt-auto">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+            <p>© 2026 AdminPanel. All rights reserved.</p>
+            <div class="flex gap-4 text-gray-400">
+              <a href="#" class="hover:text-gray-600">Privacy Policy</a>
+              <a href="#" class="hover:text-gray-600">Terms of Service</a>
+              <a href="#" class="hover:text-gray-600">Support</a>
+            </div>
+          </div>
+        </footer>
+        </main>
+      </div>
+    </div>
+
+  
+    <div id="orderModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 hidden">
+      <div class="w-full max-w-md rounded-xl bg-white p-6 shadow-xl animate-in fade-in zoom-in duration-200">
+        <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+          <h3 class="text-lg font-bold text-gray-900">Create New Order</h3>
+          <button id="closeModal" class="text-gray-400 hover:text-gray-600">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
         </div>
+        
+        <form id="addOrderForm" class="mt-4 space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Customer Name</label>
+            <input id="custName" type="text" required placeholder="e.g. John Doe" class="w-full rounded-lg border border-gray-300 p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          </div>
+          
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1">Items Count</label>
+              <input id="itemCount" type="number" min="1" value="1" required class="w-full rounded-lg border border-gray-300 p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1">Total Amount ($)</label>
+              <input id="orderPrice" type="number" step="0.01" required placeholder="0.00" class="w-full rounded-lg border border-gray-300 p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Status</label>
+            <select id="orderStatus" class="w-full rounded-lg border border-gray-300 p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option value="PROCESSING">PROCESSING</option>
+              <option value="SHIPPED">SHIPPED</option>
+              <option value="DELIVERED">DELIVERED</option>
+            </select>
+          </div>
 
-      </footer>
-
-      </main>
+          <div class="flex justify-end gap-2 pt-2 border-t border-gray-100">
+            <button type="button" id="cancelModal" class="rounded-lg px-4 py-2 text-sm font-semibold text-gray-600 hover:bg-gray-100">Cancel</button>
+            <button type="submit" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">Save Order</button>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="js/order.js"></script>
+    <script src="js/app.js"></script>
   </body>
-</html
+</html>

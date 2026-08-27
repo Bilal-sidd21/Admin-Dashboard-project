@@ -1,197 +1,277 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AdminPanel - settting</title>
-
+    <title>AdminPanel - Settings</title>
     <link rel="stylesheet" href="src/output.css" />
-
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
 
   <body class="bg-gray-50 text-gray-800">
-
-
     <div class="flex min-h-screen">
-
-      <aside id="sidebr" class="w-50 bg-amber-200 border-r shadow-md hidden  md:block border-gray-200">  
-      <button
-        id="closeSidebar"
-        class="md:hidden top-2  ml-40  mt-2
-               w-8 h-2
-               flex items-center justify-center
-               rounded-md hover:bg-gray-200">
-
-        <i class="fa-solid fa-xmark"></i>
-
-    </button>
+      <!-- Sidebar Navigation -->
+      <aside
+        id="sidebr"
+        class="fixed left-0 top-0 w-50 h-screen bg-white border-r shadow-md hidden md:block border-gray-200"
+      >
+        <button
+          id="closeSidebar"
+          class="md:hidden top-2 ml-40 mt-2 w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-200"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
 
         <div class="h-16 flex items-center px-6 border-b border-gray-200">
-
           <div class="flex items-center gap-2">
-
-            <div  class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
               <i class="fa-solid fa-layer-group text-sm"></i>
             </div>
-
             <h1 class="text-lg font-bold text-gray-800">Adminpanel</h1>
-
           </div>
-
         </div>
-
 
         <div class="px-4 py-5 border-b border-gray-200">
           <div class="flex items-center gap-3">
-
-            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
-              <i class="fa-solid fa-user text-gray-500 text-sm"></i>
+            <div class="w-9 h-9 rounded-full overflow-hidden border">
+              <img
+                id="sidebarAvatar"
+                src="Images/images.png"
+                alt="Profile"
+                class="w-full h-full object-cover"
+              />
             </div>
-
             <div>
               <p class="text-sm font-medium">BILAL BAGGA</p>
               <p class="text-xs text-gray-500">Admin</p>
             </div>
-
           </div>
         </div>
-
-
-
         <nav class="flex-1 p-4">
-
           <ul class="space-y-1">
-
             <li>
-              <a  href="Dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+              <a href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-chart-line w-4"></i>
                 <span>Dashboard</span>
               </a>
             </li>
-
             <li>
-              <a  href="user.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+              <a href="user.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-users w-4"></i>
                 <span>Users</span>
               </a>
             </li>
-
             <li>
-              <a href="product.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm  text-gray-600  font-medium">
+              <a href="product.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-box w-4"></i>
                 <span>Products</span>
               </a>
             </li>
-
             <li>
-              <a href="order.html"class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100"              >
+              <a href="order.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-cart-shopping w-4"></i>
                 <span>Orders</span>
               </a>
             </li>
-
             <li>
               <a href="Categories.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-layer-group w-4"></i>
                 <span>Categories</span>
               </a>
             </li>
-
             <li>
               <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-chart-column w-4"></i>
                 <span>Reports</span>
               </a>
             </li>
-
             <li>
               <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-message w-4"></i>
                 <span>Messages</span>
               </a>
             </li>
-
           </ul>
-
         </nav>
 
-        <div class="p-4 border-t border-gray-200">
-         
-          <a  href="setting.html" class="flex items-center gap-3 px-3 py-2 bg-purple-100 rounded-lg text-sm text-gray-600 hover:bg-gray-100 mb-1">
+        <div class="p-5 mt-10 border-t border-gray-200">
+          <a href="setting.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-blue-600 hover:bg-gray-100 mb-1">
             <i class="fa-solid fa-gear w-4"></i>
             <span>Settings</span>
           </a>
-
-          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-500 hover:bg-red-50" >
+          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-500 hover:bg-red-50">
             <i class="fa-solid fa-right-from-bracket w-4"></i>
             <span>Logout</span>
           </a>
-
         </div>
-
       </aside>
-      <main class="flex-1">
+      <main class="flex-1 md:ml-50">
+        <div>
+          <header class="h-16 bg-white border-b  border-gray-200 flex items-center justify-between px-6 shrink-0">
+            <div class="flex items-center gap-3">
+              <button id="menubtn" class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div>
+                <h2 class="text-lg font-semibold">Profile Settings</h2>
+                <p class="text-xs text-gray-500">Manage your admin profile account details</p>
+              </div>
+            </div>
+          </header>
 
-        <header  class="min-h-20  bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
-          <button
-           class="md:hidden w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
-         <i class="fa-solid fa-bars"></i>
-         </button>
-         <div class="min-w-0 flex-1">
-          <h2
-            class="text-base sm:text-lg font-semibold truncate">
-            Settings 
-          </h2>
-          <p
-            class="text-xs
-  text-gray-500
-                   truncate">
-            management & edit 
-          </p>
+          <div class="p-6 max-w-4xl space-y-6">
+            
 
-        </div>
-          
-        </header>
-
-        
-        
-        
-      <footer
-        class="border-t border-gray-200 bg-white px-4 sm:px-6 py-4"
-      >
-
-        <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-3"
-        >
-
-          <p class="text-xs text-gray-500">
-            © 2026  Predown Solutions
-          </p>
+            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+              <h3 class="text-base font-bold text-gray-900 mb-1">Personal Details</h3>
+              <p class="text-xs text-gray-500 mb-6">Update your account information and photo</p>
 
 
-          <div class="flex gap-4 text-xs text-gray-400">
+              <div class="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
+                <img
+                  id="previewAvatar"
+                  src="Images/images.png"
+                  alt="Profile"
+                  class="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
+                />
+                <div>
+                  <label class="cursor-pointer px-3.5 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg inline-block transition">
+                    Change Photo
+                    <input type="file" id="avatarInput" accept="image/*" class="hidden" />
+                  </label>
+                  <p class="text-[11px] text-gray-400 mt-1">PNG, JPG up to 2MB</p>
+                </div>
+              </div>
 
-            <a href="#" class="hover:text-gray-600">
-              Privacy Policy
-            </a>
+              <form id="profileForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
+                  <input
+                    type="text"
+                    id="inputName"
+                    value="BILAL BAGGA"
+                    class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  />
+                </div>
 
-            <a href="#" class="hover:text-gray-600">
-              Terms of Service
-            </a>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Role</label>
+                  <input
+                    type="text"
+                    value="Admin"
+                    disabled
+                    class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm bg-gray-50 text-gray-500 cursor-not-allowed"
+                  />
+                </div>
 
-            <a href="#" class="hover:text-gray-600">
-              Support
-            </a>
+                <div class="md:col-span-2">
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                  <input
+                    type="email"
+                    id="inputEmail"
+                    value="admin@predownsolutions.com"
+                    class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  />
+                </div>
+
+                <div class="md:col-span-2 flex justify-end pt-2">
+                  <button
+                    type="submit"
+                    class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm shadow-sm transition"
+                  >
+                    Save Details
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+              <h3 class="text-base font-bold text-gray-900 mb-1">Security</h3>
+              <p class="text-xs text-gray-500 mb-6">Change your account password</p>
+
+              <form id="passwordForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Current Password</label>
+                  <input
+                    type="password"
+                    id="currentPass"
+                    required
+                    class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">New Password</label>
+                  <input
+                    type="password"
+                    id="newPass"
+                    required
+                    class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div class="md:col-span-2 flex justify-end pt-2">
+                  <button
+                    type="submit"
+                    class="px-5 py-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg text-sm transition"
+                  >
+                    Update Password
+                  </button>
+                </div>
+              </form>
+            </div>
+
+         
+            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+              <h3 class="text-base font-bold text-gray-900 mb-1">Preferences & System</h3>
+              <p class="text-xs text-gray-500 mb-6">Manage alerts and display options</p>
+
+              <div class="space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+                  <div>
+                    <p class="text-sm font-medium text-gray-800">Email Alerts</p>
+                    <p class="text-xs text-gray-500">Get updates on system reports and user management</p>
+                  </div>
+                  <input type="checkbox" id="emailNotif" checked class="w-4 h-4 text-blue-600 rounded cursor-pointer" />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                  <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Language</label>
+                    <select id="langSelect" class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-blue-500">
+                      <option value="en">English</option>
+                      <option value="ur">Urdu</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Timezone</label>
+                    <select id="tzSelect" class="w-full px-3.5 py-2 border border-gray-200 rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-blue-500">
+                      <option value="PKT">Pakistan Standard Time (PKT)</option>
+                      <option value="UTC">Universal Time (UTC)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
-
         </div>
 
-      </footer>
-
+        <footer class="border-t border-gray-200 bg-white px-6 py-3 text-xs text-gray-500 flex justify-between items-center shrink-0">
+          <p>© 2026 Predown Solutions</p>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-gray-700">Privacy Policy</a>
+            <a href="#" class="hover:text-gray-700">Terms of Service</a>
+            <a href="#" class="hover:text-gray-700">Support</a>
+          </div>
+        </footer>
       </main>
     </div>
+
     <script src="js/setting.js"></script>
+    <script src="js/app.js"></script>
   </body>
-</html
+</html>

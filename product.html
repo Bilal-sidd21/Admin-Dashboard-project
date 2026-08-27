@@ -10,14 +10,16 @@
     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   </head>
 
-  <body class="bg-gray-50 text-gray-800">
+  <body class="bg-gray-50 text-gray-800 ">
+    <div class="flex min-h-screen">
 
-
-    <div id="overlay" class="flex min-h-screen">
-
-     <aside id="sidebr" class="fixed left-0 top-0 w-50 h-screen bg-amber-200 border-r shadow-md hidden md:block border-gray-200">  
-
-         <button
+      <aside
+        id="sidebr"
+        class="fixed left-0 top-0 w-50 h-screen
+               bg-white border-r shadow-md
+               hidden md:block border-gray-200 z-50"
+    > 
+     <button
         id="closeSidebar"
         class="md:hidden top-2  ml-40  mt-2
                w-8 h-2
@@ -27,6 +29,7 @@
         <i class="fa-solid fa-xmark"></i>
 
     </button>
+
         <div class="h-16 flex items-center px-6 border-b border-gray-200">
 
           <div class="flex items-center gap-2">
@@ -45,9 +48,13 @@
         <div class="px-4 py-5 border-b border-gray-200">
           <div class="flex items-center gap-3">
 
-            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
-              <i class="fa-solid fa-user text-gray-500 text-sm"></i>
-            </div>
+            <div class="w-9 h-9 rounded-full overflow-hidden">
+    <img 
+        src="Images/images.png" 
+        alt="Profile"
+        class="w-full h-full object-cover"
+    >
+</div>
 
             <div>
               <p class="text-sm font-medium">BILAL BAGGA</p>
@@ -56,12 +63,13 @@
 
           </div>
         </div>
+
         <nav class="flex-1 p-4">
 
           <ul class="space-y-1">
 
             <li>
-              <a  href="Dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+              <a  href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i class="fa-solid fa-chart-line w-4"></i>
                 <span>Dashboard</span>
               </a>
@@ -75,7 +83,7 @@
             </li>
 
             <li>
-              <a  href="product.html" class="flex items-center gap-3 px-3 py-2 bg-purple-100 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+              <a href="product.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-blue-600 transition-colors hover:bg-gray-100 hover:text-blue-600">
                 <i class="fa-solid fa-box w-4"></i>
                 <span>Products</span>
               </a>
@@ -113,7 +121,7 @@
 
         </nav>
 
-        <div class="p-4 border-t border-gray-200">
+        <div class="p-5 mt-10 border-t border-gray-200">
          
           <a  href="setting.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100 mb-1">
             <i class="fa-solid fa-gear w-4"></i>
@@ -129,7 +137,7 @@
 
       </aside>
       <main class="flex-1 md:ml-50">
-      <header  class="min-h-20  bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
+      <header  class="min-h-20   bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
         <button  id="menubtn"  class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -258,7 +266,7 @@
         </section>
                
 
-        <div  id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+        <div  id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 m-5 ">
           <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
             <div class="h-28 bg-gray-50 flex items-center justify-center relative">
 
@@ -857,4 +865,5 @@
   </body>
   
   <script src="js/product.js"></script>
+  <script src="js/app.js"></script>
 </html>
