@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="src/output.css" />
 
     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        }
+    </script>
+
   </head>
 
   <body class="bg-gray-50 text-gray-800 ">
@@ -146,8 +154,8 @@
               <i class="fa-solid fa-bars"></i>
             </button>
             <div>
-              <h2 class="text-base font-bold text-gray-900 sm:text-lg">Orders Management</h2>
-              <p class="hidden text-xs text-gray-500 sm:block">Review and manage recent transactions</p>
+              <h2 class="text-base font-bold text-gray-900 sm:text-lg">product management</h2>
+              <p class="hidden text-xs text-gray-500 sm:block">Review and manage product details</p>
             </div>
           </div>
           <div class="flex items-center gap-2 sm:gap-3 shrink-0">
@@ -174,11 +182,11 @@
             
           </div>
           <button
-            id="addOrderBtn"
+            id="addProductBtn"
             class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors sm:text-sm"
           >
             <i class="fa-solid fa-plus text-xs"></i>
-            <span>Add Order</span>
+            <span>Add Product</span>
           </button>
         </div>
     

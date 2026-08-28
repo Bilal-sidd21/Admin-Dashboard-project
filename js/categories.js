@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebr = document.querySelector("#sidebr");
-  const menubtn = document.querySelector("#menubtn");
-  const closeSidebar = document.querySelector("#closeSidebar");
+  
 
   const addCategoryBtn = document.getElementById("addCategoryBtn");
   const categoryModal = document.getElementById("categoryModal");
@@ -13,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchCategoryInput");
   const statusFilter = document.getElementById("statusCategoryFilter");
 
-  // Sidebar events
+ 
   menubtn?.addEventListener("click", () => sidebr?.classList.remove("hidden"));
   closeSidebar?.addEventListener("click", () => sidebr?.classList.add("hidden"));
 

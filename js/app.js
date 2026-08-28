@@ -20,7 +20,7 @@ closeSidebar.addEventListener("click", function () {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Avatar Instant Preview
+ 
   const avatarInput = document.getElementById("avatarInput");
   const previewAvatar = document.getElementById("previewAvatar");
   const sidebarAvatar = document.getElementById("sidebarAvatar");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 2. Personal Profile Form Handling
+
   const profileForm = document.getElementById("profileForm");
   if (profileForm) {
     profileForm.addEventListener("submit", (e) => {
@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 3. Password Reset Validation
   const passwordForm = document.getElementById("passwordForm");
   if (passwordForm) {
     passwordForm.addEventListener("submit", (e) => {
@@ -86,21 +85,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Logout link selector
+
   const logoutBtn = document.querySelector('a[href="#"]'); // Ya direct ID se target karein
 
-  // Alternate: Logout element par ID lagayein <a id="logoutBtn" href="#">
+
   const logoutElement = document.getElementById("logoutBtn") || logoutBtn;
 
   if (logoutElement) {
     logoutElement.addEventListener("click", (e) => {
       e.preventDefault();
 
-      // Session data remove karein
+  
       localStorage.removeItem("isLoggedIn");
       localStorage.removeItem("userEmail");
 
-      // Login page par bhej dein
+   
       window.location.href = "login.html";
     });
   }
@@ -109,56 +108,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggleBtn = document.getElementById("themeToggleBtn");
-  const themeIcon = document.getElementById("themeIcon");
 
-  // Check saved theme or system setting
-  const savedTheme = localStorage.getItem("theme");
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
-    applyDarkMode();
-  } else {
-    applyLightMode();
-  }
+let themeToggleBtn = document.getElementById("themeToggleBtn");
+let themeIcon = document.getElementById("themeIcon");
 
-  // Toggle Theme on Moon/Sun Icon Click
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const isDarkMode = document.documentElement.classList.contains("dark");
-      if (isDarkMode) {
-        applyLightMode();
-      } else {
-        applyDarkMode();
-      }
-    });
-  }
 
-  function applyDarkMode() {
+let savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
     document.documentElement.classList.add("dark");
-    if (themeIcon) {
-      themeIcon.classList.remove("fa-moon");
-      themeIcon.classList.add("fa-sun");
-    }
-    localStorage.setItem("theme", "dark");
-  }
 
-  function applyLightMode() {
-    document.documentElement.classList.remove("dark");
-    if (themeIcon) {
-      themeIcon.classList.remove("fa-sun");
-      themeIcon.classList.add("fa-moon");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+}
+
+
+themeToggleBtn.addEventListener("click", function () {
+
+    document.documentElement.classList.toggle("dark");
+
+ 
+    if (document.documentElement.classList.contains("dark")) {
+
+        localStorage.setItem("theme", "dark");
+
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+
+    } 
+  
+    else {
+
+        localStorage.setItem("theme", "light");
+
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
     }
-    localStorage.setItem("theme", "light");
-  }
+
 });
-
-
-
-
-
-
-
-
 

@@ -9,6 +9,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        }
+    </script>
+
   </head>
 
   <body class="bg-gray-50 text-gray-800">
@@ -153,26 +161,21 @@
         <div>
 
          <header class="min-h-20 bg-white border-b border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-6 py-3">
-  
-  <!-- Left Side: Mobile Menu Button & Title -->
   <div class="flex items-center gap-3 min-w-0 flex-1">
     <button id="menubtn" class="md:hidden shrink-0 w-10 h-10 flex items-center justify-center border border-gray-200 rounded-md">
       <i class="fa-solid fa-bars"></i>
     </button>
     <div class="min-w-0 flex-1">
       <h2 class="text-base sm:text-lg font-semibold truncate">
-        Analytics Overview
+        Message
       </h2>
       <p class="text-xs text-gray-500 truncate">
-        Product, User & Revenue
+        message details
       </p>
     </div>
   </div>
-
-  <!-- Right Side: Dark Mode & Login Buttons -->
   <div class="flex items-center gap-2 sm:gap-3 shrink-0">
     
-    <!-- Dark Mode Toggle Button -->
     <button
       id="themeToggleBtn"
       title="Toggle Theme"
@@ -180,8 +183,6 @@
     >
       <i class="fa-solid fa-moon text-sm" id="themeIcon"></i>
     </button>
-
-    <!-- Login Button -->
     <a
       href="login.html"
       class="flex items-center gap-2 px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg shadow-sm transition-colors"

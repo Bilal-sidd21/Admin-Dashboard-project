@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const exportPdfBtn = document.getElementById("exportPdfBtn");
 
   
-  // --- Sample Reports Data ---
+ 
   let reportsData = [
     { id: "#REP-101", source: "Electronics Sales", date: "2026-08-25", orders: 142, amount: 12450.00, type: "SALES", status: "Completed" },
     { id: "#REP-102", source: "Audio & Wearables", date: "2026-08-24", orders: 89, amount: 4320.00, type: "SALES", status: "Completed" },
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: "#REP-106", source: "Active User Logins", date: "2026-06-10", orders: 320, amount: 0.00, type: "USERS", status: "Completed" }
   ];
 
-  // --- Filter Logic ---
+
   function getFilteredData() {
     const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
     const selectedType = typeFilter ? typeFilter.value : "ALL";
@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const now = new Date();
 
     return reportsData.filter((item) => {
-      // 1. Search Filter (Search by ID or Category Name)
+   
       const matchesSearch = 
         item.id.toLowerCase().includes(searchQuery) ||
         item.source.toLowerCase().includes(searchQuery);
 
-      // 2. Report Type Filter
+
       const matchesType = selectedType === "ALL" || item.type === selectedType;
 
       // 3. Date Range Filter
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Render Table Function ---
+
   function renderReports() {
     if (!reportsTableBody) return;
     reportsTableBody.innerHTML = "";
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Export CSV Functionality ---
+
   exportCsvBtn?.addEventListener("click", () => {
     const dataToExport = getFilteredData();
 
@@ -121,16 +121,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeChild(link);
   });
 
-  // --- Export PDF / Print Functionality ---
+
   exportPdfBtn?.addEventListener("click", () => {
     window.print();
   });
 
-  // --- Event Listeners for Filters & Search ---
+
   searchInput?.addEventListener("input", renderReports);
   dateRangeFilter?.addEventListener("change", renderReports);
   typeFilter?.addEventListener("change", renderReports);
 
-  // Initial Load
+
   renderReports();
 });

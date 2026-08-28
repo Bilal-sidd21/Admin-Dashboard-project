@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   
 
-  const addBtn = document.getElementById("addproductbtn");
+  const addBtn = document.getElementById("adduserbtn");
   const modal = document.getElementById("userModal");
   const closeModalBtn = document.getElementById("closeModalBtn");
   const cancelModalBtn = document.getElementById("cancelModalBtn");
@@ -187,4 +187,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
  
   renderTable();
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const exportBtn = document.getElementById("exportBtn");
+  const filterBtn = document.getElementById("filterBtn");
+
+
+  if (exportBtn) {
+    exportBtn.addEventListener("click", () => {
+ 
+      const table = document.getElementById("userTable") || document.querySelector("table");
+
+      if (!table) {
+        alert("Table nahi mili!");
+        return;
+      }
+
+      let csvData = [];
+      const rows = table.querySelectorAll("tr");
+
+      rows.forEach((row) => {
+        const rowData = [];
+    
+        const cols = row.querySelectorAll("th, td");
+        
+        cols.forEach((col) => {
+  
+          let text = col.innerText.replace(/"/g, '""').trim();
+          rowData.push(`"${text}"`);
+        });
+
+        if (rowData.length > 0) {
+          csvData.push(rowData.join(","));
+        }
+      });
+
+
+      const csvString = csvData.join("\n");
+      const blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.setAttribute("href", url);
+      link.setAttribute("download", "Users_Data.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+
+
+  if (filterBtn) {
+    filterBtn.addEventListener("click", () => {
+ 
+      console.log("Filter clicked");
+    });
+  }
 });

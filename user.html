@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="src/output.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        }
+    </script>
+
   </head>
 
   <body class="bg-gray-50 text-gray-800">
@@ -181,22 +188,27 @@
 
         <!-- Action Bar: Add Order Button Moved to End -->
         <div class="min-h-20 bg-white border-b border-gray-200 flex items-center justify-between gap-3 px-3 sm:px-6 py-3">
-          <div class="flex items-center gap-3">
-            <button class="flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 sm:text-sm">
-              <i class="fa-solid fa-sliders text-gray-500"></i>
-              <span>Filter</span>
-            </button>
-            <button class="flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 sm:text-sm">
-              <i class="fa-solid fa-download text-gray-500"></i>
-              <span>Export</span>
-            </button>
-          </div>
+          <div class="min-h-20 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between gap-3 px-3 sm:px-6 py-3">
+  <div class="flex items-center gap-3">
+    <!-- Filter Button -->
+    <button id="filterBtn" class="flex items-center gap-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-1.5 text-xs font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 sm:text-sm">
+      <i class="fa-solid fa-sliders text-gray-500 dark:text-gray-400"></i>
+      <span>Filter</span>
+    </button>
+    
+    <!-- Export Button -->
+    <button id="exportBtn" class="flex items-center gap-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-1.5 text-xs font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 sm:text-sm">
+      <i class="fa-solid fa-download text-gray-500 dark:text-gray-400"></i>
+      <span>Export</span>
+    </button>
+  </div>
+</div>
           <button
-            id="addOrderBtn"
+            id="adduserbtn"
             class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors sm:text-sm"
           >
             <i class="fa-solid fa-plus text-xs"></i>
-            <span>Add Order</span>
+            <span>Add user</span>
           </button>
         </div>
 
